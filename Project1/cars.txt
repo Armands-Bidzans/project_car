@@ -1,0 +1,20 @@
+Toyota Corolla 2015 red ABC123  
+Honda Civic 2018 blue XYZ789  
+Ford Mustang 2020 black MNO456  
+Chevrolet Malibu 2017 white LMN321  
+BMW 320i 2019 silver QWE987  
+Audi A4 2016 gray ASD654  
+Mercedes C200 2018 black ZXC852  
+Volkswagen Golf 2015 red UIO456  
+Nissan Altima 2020 blue HJK123  
+Kia Optima 2017 white PLO789  
+Hyundai Sonata 2018 silver MNB456  
+Subaru Impreza 2019 red VBN321  
+Mazda6 2016 blue QAZ147  
+Lexus ES350 2021 black WSX258  
+Infiniti Q50 2020 gray EDC369  
+Acura TLX 2017 red RFV147  
+Volvo S60 2018 white TGB258  
+Jaguar XE 2019 silver YHN369  
+Cadillac ATS 2016 black UJM147  
+Porsche 911 2021 red IKL258

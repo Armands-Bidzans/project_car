@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\cars.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cars.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\color.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\color.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\clients.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\clients.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\Source.cpp",
+              "RelativeDocumentMoniker": "Project1\\Source.cpp",
+              "ToolTip": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\Source.cpp",
+              "RelativeToolTip": "Project1\\Source.cpp",
+              "ViewState": "AgIAADUAAAAAAAAAAAAQwEUBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T09:10:23.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "color.txt",
+              "DocumentMoniker": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\color.txt",
+              "RelativeDocumentMoniker": "Project1\\color.txt",
+              "ToolTip": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\color.txt",
+              "RelativeToolTip": "Project1\\color.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-02T16:10:12.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cars.txt",
+              "DocumentMoniker": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\cars.txt",
+              "RelativeDocumentMoniker": "Project1\\cars.txt",
+              "ToolTip": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\cars.txt",
+              "RelativeToolTip": "Project1\\cars.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-02T14:25:58.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clients.txt",
+              "DocumentMoniker": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\clients.txt",
+              "RelativeDocumentMoniker": "Project1\\clients.txt",
+              "ToolTip": "C:\\Users\\lopuw\\Desktop\\newhw\\project\\Project1\\Project1\\clients.txt",
+              "RelativeToolTip": "Project1\\clients.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-02T14:54:06.612Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
