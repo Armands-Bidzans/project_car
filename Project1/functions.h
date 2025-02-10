@@ -4,8 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <algorithm> // Для std::transform
-#include <cstdlib>   // Для exit()
+#include <algorithm>
+#include <cstdlib>
 
 using namespace std;
 
@@ -16,7 +16,6 @@ int carCount = 0, clientCount = 0;
 string colors[MAX_COLORS];
 int colorCount = 0;
 
-// Вспомогательная функция для перевода строки в нижний регистр
 string toLower(string str) {
     transform(str.begin(), str.end(), str.begin(), ::tolower);
     return str;
@@ -55,90 +54,89 @@ void loadData() {
 
 void addCar() {
     if (carCount >= MAX_CARS) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     if (colorCount == 0) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     Car c;
-    cout << "Enter the car's brand, model, and year: ";
+    cout << COLOR_GREEN << "Enter the car's brand, model, and year: " COLOR_RESET;
     if (!(cin >> c.brand >> c.model >> c.year)) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
 
-    cout << "Available colors:\n";
+    cout << COLOR_GREEN << "Available colors:\n" COLOR_RESET;
     for (int i = 0; i < colorCount; i++)
-        cout << i + 1 << ". " << colors[i] << "  ";
-    cout << "\nSelect a color (1-" << colorCount << "): ";
+        cout << COLOR_GREEN << i + 1 << ". " << colors[i] << "  " COLOR_RESET;
+    cout << COLOR_GREEN << "\nSelect a color (1-" << colorCount << "): " COLOR_RESET;
 
     int choice;
     if (!(cin >> choice)) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     if (choice < 1 || choice > colorCount) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
-    // Индексация с 0: при выборе 1 выбирается colors[0]
     c.color = colors[choice - 1];
 
-    cout << "Enter the car's number: ";
+    cout << COLOR_GREEN << "Enter the car's number: " COLOR_RESET;
     if (!(cin >> c.number)) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     cars[carCount++] = c;
-    cout << "Car added.\n";
+    cout << COLOR_GREEN << "Car added.\n" COLOR_RESET;
 }
 
 void addClient() {
     if (clientCount >= MAX_CLIENTS) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     Client cl;
-    cout << "Enter the name, middle name, surname, rent date (dd/mm/yyyy), and price per day: ";
+    cout << COLOR_GREEN << "Enter the name, middle name, surname, rent date (dd/mm/yyyy), and price per day: " COLOR_RESET;
     if (!(cin >> cl.name >> cl.middle >> cl.surname >> cl.rentDate >> cl.price)) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     clients[clientCount++] = cl;
-    cout << "Client added.\n";
+    cout << COLOR_GREEN << "Client added.\n" COLOR_RESET;
 }
 
 void displayCars() {
     if (carCount == 0) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     for (int i = 0; i < carCount; i++)
-        cout << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " "
-        << cars[i].color << " " << cars[i].number << "\n";
+        cout << COLOR_DARK_GREEN << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " "
+        << cars[i].color << " " << cars[i].number << "\n" COLOR_RESET;
 }
 
 void displayClients() {
     if (clientCount == 0) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     for (int i = 0; i < clientCount; i++)
-        cout << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " "
-        << clients[i].rentDate << " " << clients[i].price << "\n";
+        cout << COLOR_DARK_GREEN << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " "
+        << clients[i].rentDate << " " << clients[i].price << "\n" COLOR_RESET;
 }
 
 void searchCar() {
     int choice;
-    cout << "Search car by: 1.Brand 2.Color 3.Number 4.Year\nChoice: ";
+    cout << COLOR_CYAN << "Search car by: 1.Brand 2.Color 3.Number 4.Year\nChoice: " COLOR_RESET;
     if (!(cin >> choice)) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     if (choice < 1 || choice > 4) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
 
@@ -146,33 +144,33 @@ void searchCar() {
     int yr = 0;
     switch (choice) {
     case 1:
-        cout << "Enter brand: ";
+        cout << COLOR_CYAN << "Enter brand: " COLOR_RESET;
         if (!(cin >> key)) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
         key = toLower(key);
         break;
     case 2:
-        cout << "Enter color: ";
+        cout << COLOR_CYAN << "Enter color: " COLOR_RESET;
         if (!(cin >> key)) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
         key = toLower(key);
         break;
     case 3:
-        cout << "Enter number: ";
+        cout << COLOR_CYAN << "Enter number: " COLOR_RESET;
         if (!(cin >> key)) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
         key = toLower(key);
         break;
     case 4:
-        cout << "Enter year: ";
+        cout << COLOR_CYAN << "Enter year: " COLOR_RESET;
         if (!(cin >> yr)) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
         break;
@@ -188,38 +186,38 @@ void searchCar() {
         case 4: match = (cars[i].year == yr); break;
         }
         if (match) {
-            cout << "Found: " << cars[i].brand << " " << cars[i].model << " "
-                << cars[i].year << " " << cars[i].color << " " << cars[i].number << "\n";
+            cout << COLOR_CYAN << "Found: " << cars[i].brand << " " << cars[i].model << " "
+                << cars[i].year << " " << cars[i].color << " " << cars[i].number << "\n" COLOR_RESET;
             found = true;
             break;
         }
     }
     if (!found) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
 }
 
 void searchClient() {
     int choice;
-    cout << "Search client by: 1.Surname 2.Price range\nChoice: ";
+    cout << COLOR_CYAN << "Search client by: 1.Surname 2.Price range\nChoice: " COLOR_RESET;
     if (!(cin >> choice)) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     bool found = false;
     if (choice == 1) {
         string surname;
-        cout << "Enter surname: ";
+        cout << COLOR_CYAN << "Enter surname: " COLOR_RESET;
         if (!(cin >> surname)) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
         surname = toLower(surname);
         for (int i = 0; i < clientCount; i++) {
             if (toLower(clients[i].surname) == surname) {
-                cout << "Found: " << clients[i].name << " "
-                    << clients[i].middle << " " << clients[i].surname << "\n";
+                cout << COLOR_CYAN << "Found: " << clients[i].name << " "
+                    << clients[i].middle << " " << clients[i].surname << "\n" COLOR_RESET;
                 found = true;
                 break;
             }
@@ -227,43 +225,43 @@ void searchClient() {
     }
     else if (choice == 2) {
         double minP, maxP;
-        cout << "Enter minimum and maximum price: ";
+        cout << COLOR_CYAN << "Enter minimum and maximum price: " COLOR_RESET;
         if (!(cin >> minP >> maxP)) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
         for (int i = 0; i < clientCount; i++) {
             if (clients[i].price >= minP && clients[i].price <= maxP) {
-                cout << "Found: " << clients[i].name << " "
+                cout << COLOR_CYAN << "Found: " << clients[i].name << " "
                     << clients[i].middle << " " << clients[i].surname
-                    << " Price: " << clients[i].price << "\n";
+                    << " Price: " << clients[i].price << "\n" COLOR_RESET;
                 found = true;
                 break;
             }
         }
     }
     else {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     if (!found) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
 }
 
 void deleteEntry() {
     int choice;
-    cout << "Delete: 1.Car 2.Client 3.All\nChoice: ";
+    cout << COLOR_RED << "Delete: 1.Car 2.Client 3.All\nChoice: " COLOR_RESET;
     if (!(cin >> choice)) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     if (choice == 1) {
         string num;
-        cout << "Enter the car number to delete: ";
+        cout << COLOR_RED << "Enter the car number to delete: " COLOR_RESET;
         if (!(cin >> num)) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
         num = toLower(num);
@@ -273,19 +271,19 @@ void deleteEntry() {
                 for (int j = i; j < carCount - 1; j++)
                     cars[j] = cars[j + 1];
                 carCount--;
-                cout << "Car deleted.\n";
+                cout << COLOR_RED << "Car deleted.\n" COLOR_RESET;
                 found = true;
                 break;
             }
         }
         if (!found) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
     }
     else if (choice == 2) {
         string surname;
-        cout << "Enter client's surname: ";
+        cout << COLOR_RED << "Enter client's surname: " COLOR_RESET;
         cin.ignore();
         getline(cin, surname);
         surname = toLower(surname);
@@ -295,22 +293,22 @@ void deleteEntry() {
                 for (int j = i; j < clientCount - 1; j++)
                     clients[j] = clients[j + 1];
                 clientCount--;
-                cout << "Client deleted.\n";
+                cout << COLOR_RED << "Client deleted.\n" COLOR_RESET;
                 found = true;
                 break;
             }
         }
         if (!found) {
-            cout << "некорректное значение\n";
+            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
             exit(EXIT_FAILURE);
         }
     }
     else if (choice == 3) {
         carCount = clientCount = 0;
-        cout << "All data deleted.\n";
+        cout << COLOR_RED << "All data deleted.\n" COLOR_RESET;
     }
     else {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
 }
@@ -326,7 +324,7 @@ int convertToDays(const string& date) {
 
 void calcDebt() {
     string surname;
-    cout << "Enter client's surname: ";
+    cout << COLOR_BLUE << "Enter client's surname: " COLOR_RESET;
     cin.ignore();
     getline(cin, surname);
     surname = toLower(surname);
@@ -338,20 +336,20 @@ void calcDebt() {
         }
     }
     if (idx == -1) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     string today;
-    cout << "Enter today's date (dd/mm/yyyy): ";
+    cout << COLOR_BLUE << "Enter today's date (dd/mm/yyyy): " COLOR_RESET;
     if (!(cin >> today)) {
-        cout << "некорректное значение\n";
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     int diff = convertToDays(today) - convertToDays(clients[idx].rentDate);
     if (diff < 0)
         diff = 0;
-    cout << "Debt for " << clients[idx].name << " " << clients[idx].surname
-        << " is: " << diff * clients[idx].price << "\n";
+    cout << COLOR_BLUE << "Debt for " << clients[idx].name << " " << clients[idx].surname
+        << " is: " << diff * clients[idx].price << "\n" COLOR_RESET;
 }
 
 #endif // FUNCTIONS_H

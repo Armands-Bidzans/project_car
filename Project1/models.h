@@ -1,21 +1,21 @@
 #ifndef MODELS_H
 #define MODELS_H
-
+using namespace std;
 #include <string>
 
 struct Car {
-    std::string brand;
-    std::string model;
-    std::string color;
-    std::string number;
+    string brand;
+    string model;
+    string color;
+    string number;
     int year;
 };
 
 struct Client {
-    std::string name;
-    std::string middle;
-    std::string surname;
-    std::string rentDate;
+    string name;
+    string middle;
+    string surname;
+    string rentDate;
     double price;
 };
 

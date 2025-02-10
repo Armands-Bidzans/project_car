@@ -1,19 +1,19 @@
 #pragma once
 #ifndef FUNCTIONS2_H
 #define FUNCTIONS2_H
-
+using namespace std;
 #include <string>
 #include <algorithm>
 
-inline std::string toLower(const std::string& str) {
-    std::string result = str;
-    std::transform(result.begin(), result.end(), result.begin(), ::tolower);
+inline string toLower(const string& str) {
+    string result = str;
+    transform(result.begin(), result.end(), result.begin(), ::tolower);
     return result;
 }
 
-inline std::string toUpper(const std::string& str) {
-    std::string result = str;
-    std::transform(result.begin(), result.end(), result.begin(), ::toupper);
+inline string toUpper(const string& str) {
+    string result = str;
+    transform(result.begin(), result.end(), result.begin(), ::toupper);
     return result;
 }
 

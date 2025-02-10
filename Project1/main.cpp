@@ -7,7 +7,7 @@ using namespace std;
 #define COLOR_RESET      "\033[0m"
 #define COLOR_RED        "\033[31m"
 #define COLOR_GREEN      "\033[32m"
-#define COLOR_DARK_GREEN "\033[2;32m"  // Темно-зеленый
+#define COLOR_DARK_GREEN "\033[2;32m"  
 #define COLOR_CYAN       "\033[36m"
 #define COLOR_BLUE       "\033[34m"
 #define COLOR_GRAY       "\033[90m"
@@ -22,17 +22,33 @@ int main() {
     int choice;
     do {
         clearScreen();
-        cout << COLOR_YELLOW "\nCar Rental System Menu:\n" COLOR_RESET
+        cout << COLOR_YELLOW
+            << "&&&&  &&&&&  &&  &&  &&&&&&     &&&&      &&&&   &&&&  &&&&&\n"
+            << "&&  &  &&     &&& &&    &&      &&  &&    &&  && &&  && &&  &\n"
+            << "&&&&&  &&&&&  && &&&    &&      &&&&&&    &&     &&&&&& &&&&&\n"
+            << "&&  && &&     &&  &&    &&      &&  &&    &&  && &&  && &&  &&\n"
+            << "&&  && &&&&&  &&  &&    &&      &&  &&     &&&&  &&  && &&  &&\n\n"
+            << "\t\t           _____\n"
+            << "\t\t       ___/__|__\\____\n"
+            << "\t\t      |           |  |\n"
+            << "\t\t      |___\\_____/_|__|\n"
+            << "\t\t        (o)     (o)\n\n"
+            << COLOR_RESET
+            << COLOR_YELLOW "\t\t  Car Rental System Menu:\n\n" COLOR_RESET
             << COLOR_GREEN "1. Add car\n"
             << "2. Add client\n" COLOR_RESET
-            << COLOR_DARK_GREEN "3. Show cars\n"  // Темно-зеленый
-            << "4. Show clients\n" COLOR_RESET    // Темно-зеленый
+            << COLOR_DARK_GREEN "3. Show cars\n"
+            << "4. Show clients\n" COLOR_RESET
             << COLOR_CYAN "5. Search (car/client)\n" COLOR_RESET
             << COLOR_RED "6. Delete (entry/all data)\n" COLOR_RESET
             << COLOR_BLUE "7. Calculate client debt\n" COLOR_RESET
             << COLOR_GRAY "8. Exit\n" COLOR_RESET
             << "Enter your choice: ";
-        cin >> choice;
+
+        if (!(cin >> choice)) {
+            cout << COLOR_RED "\nInvalid input. Exiting...\n" COLOR_RESET;
+            exit(EXIT_FAILURE);
+        }
         clearScreen();
 
         switch (choice) {
@@ -51,14 +67,18 @@ int main() {
         case 5: {
             int sub;
             cout << COLOR_CYAN "Search: 1.Car 2.Client\nChoice: " COLOR_RESET;
-            cin >> sub;
+            if (!(cin >> sub)) {
+                cout << COLOR_RED "\nInvalid input. Exiting...\n" COLOR_RESET;
+                exit(EXIT_FAILURE);
+            }
             clearScreen();
             if (sub == 1)
                 searchCar();
             else if (sub == 2)
                 searchClient();
             else {
-                cout << COLOR_RED "Invalid choice.\n" COLOR_RESET;
+                cout << COLOR_RED "Invalid choice. Exiting...\n" COLOR_RESET;
+                exit(EXIT_FAILURE);
             }
             break;
         }
@@ -73,8 +93,8 @@ int main() {
             saveData();
             break;
         default:
-            cout << COLOR_RED "Invalid choice. Please enter 1-8.\n" COLOR_RESET;
-            break;
+            cout << COLOR_RED "Invalid choice. Exiting...\n" COLOR_RESET;
+            exit(EXIT_FAILURE);
         }
         if (choice != 8) {
             cout << "\nPress Enter to continue...";
