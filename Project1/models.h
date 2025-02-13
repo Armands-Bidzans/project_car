@@ -8,6 +8,7 @@ struct Car {
     string model;
     string color;
     string number;
+    double price;
     int year;
 };
 
@@ -16,7 +17,6 @@ struct Client {
     string middle;
     string surname;
     string rentDate;
-    double price;
 };
 
 #endif // MODELS_H

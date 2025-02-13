@@ -133,7 +133,6 @@
   <ItemGroup>
     <Text Include="cars.txt" />
     <Text Include="clients.txt" />
-    <Text Include="color.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data.h" />

@@ -1,12 +1,12 @@
-Toyota Corolla 2015 red ABC123
-Honda Civic 2018 blue XYZ789
-Ford Mustang 2020 black MNO456
-Chevrolet Malibu 2017 white LMN321
-BMW 320i 2019 silver QWE987
-Audi A4 2016 gray ASD654
-Mercedes C200 2018 black ZXC852
-Volkswagen Golf 2015 red UIO456
-Nissan Altima 2020 blue HJK123
-Kia Optima 2017 white PLO789
-Hyundai Sonata 2018 silver MNB456
-Subaru Impreza 2019 red VBN321
+Toyota Corolla 2015 red ABC123 50
+Honda Civic 2018 blue XYZ789 60
+Ford Mustang 2020 black MNO456 55.5
+Chevrolet Malibu 2017 white LMN321 65
+BMW 320i 2019 silver QWE987 70
+Audi A4 2016 gray ASD654 55
+Mercedes C200 2018 black ZXC852 60.5
+Volkswagen Golf 2015 red UIO456 52
+Nissan Altima 2020 blue HJK123 68
+Kia Optima 2017 white PLO789 59
+Hyundai Sonata 2018 silver MNB456 64
+Subaru Impreza 2019 red VBN321 53.5

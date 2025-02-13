@@ -1,5 +1,6 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
+
 #include "data.h"
 #include <iostream>
 #include <fstream>
@@ -13,9 +14,6 @@ Car cars[MAX_CARS];
 Client clients[MAX_CLIENTS];
 int carCount = 0, clientCount = 0;
 
-string colors[MAX_COLORS];
-int colorCount = 0;
-
 string toLower(string str) {
     transform(str.begin(), str.end(), str.begin(), ::tolower);
     return str;
@@ -25,31 +23,26 @@ void saveData() {
     ofstream ofs("cars.txt");
     for (int i = 0; i < carCount; i++)
         ofs << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " "
-        << cars[i].color << " " << cars[i].number << "\n";
+        << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n";
 
     ofstream ofs2("clients.txt");
     for (int i = 0; i < clientCount; i++)
         ofs2 << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " "
-        << clients[i].rentDate << " " << clients[i].price << "\n";
+        << clients[i].rentDate << "\n";
 }
 
 void loadData() {
     ifstream ifs("cars.txt");
     carCount = 0;
     while (carCount < MAX_CARS && (ifs >> cars[carCount].brand >> cars[carCount].model
-        >> cars[carCount].year >> cars[carCount].color >> cars[carCount].number))
+        >> cars[carCount].year >> cars[carCount].color >> cars[carCount].number >> cars[carCount].price))
         carCount++;
 
     ifstream ifs2("clients.txt");
     clientCount = 0;
     while (clientCount < MAX_CLIENTS && (ifs2 >> clients[clientCount].name >> clients[clientCount].middle
-        >> clients[clientCount].surname >> clients[clientCount].rentDate >> clients[clientCount].price))
+        >> clients[clientCount].surname >> clients[clientCount].rentDate))
         clientCount++;
-
-    ifstream ifs3("color.txt");
-    colorCount = 0;
-    while (colorCount < MAX_COLORS && getline(ifs3, colors[colorCount]))
-        colorCount++;
 }
 
 void addCar() {
@@ -57,38 +50,37 @@ void addCar() {
         cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
-    if (colorCount == 0) {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-        exit(EXIT_FAILURE);
-    }
     Car c;
-    cout << COLOR_GREEN << "Enter the car's brand, model, and year: " COLOR_RESET;
-    if (!(cin >> c.brand >> c.model >> c.year)) {
+    cout << COLOR_GREEN << "Enter the car's brand, model, and year, price: " COLOR_RESET;
+    if (!(cin >> c.brand >> c.model >> c.year >> c.price)) {
         cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
 
     cout << COLOR_GREEN << "Available colors:\n" COLOR_RESET;
-    for (int i = 0; i < colorCount; i++)
-        cout << COLOR_GREEN << i + 1 << ". " << colors[i] << "  " COLOR_RESET;
-    cout << COLOR_GREEN << "\nSelect a color (1-" << colorCount << "): " COLOR_RESET;
+    for (int i = 0; i < 16; i++)
+        cout << COLOR_GREEN << i + 1 << ". " << colorStrings[i] << "  " COLOR_RESET;
 
+    cout << COLOR_GREEN << "\nSelect a color (1-16): " COLOR_RESET;
     int choice;
-    if (!(cin >> choice)) {
+    if (!(cin >> choice) || choice < 1 || choice > 16) {
         cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
-    if (choice < 1 || choice > colorCount) {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-        exit(EXIT_FAILURE);
-    }
-    c.color = colors[choice - 1];
+    c.color = colorStrings[choice - 1];
 
     cout << COLOR_GREEN << "Enter the car's number: " COLOR_RESET;
     if (!(cin >> c.number)) {
         cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
+
+    cout << COLOR_GREEN << "Enter the car's price per day: " COLOR_RESET;
+    if (!(cin >> c.price)) {
+        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
+        exit(EXIT_FAILURE);
+    }
+
     cars[carCount++] = c;
     cout << COLOR_GREEN << "Car added.\n" COLOR_RESET;
 }
@@ -99,8 +91,8 @@ void addClient() {
         exit(EXIT_FAILURE);
     }
     Client cl;
-    cout << COLOR_GREEN << "Enter the name, middle name, surname, rent date (dd/mm/yyyy), and price per day: " COLOR_RESET;
-    if (!(cin >> cl.name >> cl.middle >> cl.surname >> cl.rentDate >> cl.price)) {
+    cout << COLOR_GREEN << "Enter the name, middle name, surname, and rent date (dd/mm/yyyy): " COLOR_RESET;
+    if (!(cin >> cl.name >> cl.middle >> cl.surname >> cl.rentDate)) {
         cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
@@ -115,7 +107,7 @@ void displayCars() {
     }
     for (int i = 0; i < carCount; i++)
         cout << COLOR_DARK_GREEN << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " "
-        << cars[i].color << " " << cars[i].number << "\n" COLOR_RESET;
+        << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" COLOR_RESET;
 }
 
 void displayClients() {
@@ -125,7 +117,7 @@ void displayClients() {
     }
     for (int i = 0; i < clientCount; i++)
         cout << COLOR_DARK_GREEN << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " "
-        << clients[i].rentDate << " " << clients[i].price << "\n" COLOR_RESET;
+        << clients[i].rentDate << "\n" COLOR_RESET;
 }
 
 void searchCar() {
@@ -187,7 +179,7 @@ void searchCar() {
         }
         if (match) {
             cout << COLOR_CYAN << "Found: " << cars[i].brand << " " << cars[i].model << " "
-                << cars[i].year << " " << cars[i].color << " " << cars[i].number << "\n" COLOR_RESET;
+                << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" COLOR_RESET;
             found = true;
             break;
         }
@@ -231,10 +223,10 @@ void searchClient() {
             exit(EXIT_FAILURE);
         }
         for (int i = 0; i < clientCount; i++) {
-            if (clients[i].price >= minP && clients[i].price <= maxP) {
+            if (cars[i].price >= minP && cars[i].price <= maxP) {
                 cout << COLOR_CYAN << "Found: " << clients[i].name << " "
                     << clients[i].middle << " " << clients[i].surname
-                    << " Price: " << clients[i].price << "\n" COLOR_RESET;
+                    << " Price: " << cars[i].price << "\n" COLOR_RESET;
                 found = true;
                 break;
             }
@@ -349,7 +341,7 @@ void calcDebt() {
     if (diff < 0)
         diff = 0;
     cout << COLOR_BLUE << "Debt for " << clients[idx].name << " " << clients[idx].surname
-        << " is: " << diff * clients[idx].price << "\n" COLOR_RESET;
+        << " is: " << diff * cars[idx].price << "\n" COLOR_RESET;
 }
 
 #endif // FUNCTIONS_H

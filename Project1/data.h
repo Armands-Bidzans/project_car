@@ -6,7 +6,6 @@
 using namespace std;
 const int MAX_CARS = 100;
 const int MAX_CLIENTS = 100;
-const int MAX_COLORS = 20;
 
 // Цветовые макросы
 #define COLOR_RESET      "\033[0m"
@@ -22,9 +21,6 @@ extern Client clients[MAX_CLIENTS];
 extern int carCount;
 extern int clientCount;
 
-extern string colors[MAX_COLORS];
-extern int colorCount;
-
 void saveData();
 void loadData();
 void addCar();
@@ -36,5 +32,30 @@ void searchClient();
 void deleteEntry();
 int convertToDays(const string& date);
 void calcDebt();
+
+enum colormenu {
+    BLACK,
+    BLUE,
+    GREEN,
+    AQUA,
+    RED,
+    PURPLE,
+    YELLOW,
+    WHITE,
+    GRAY,
+    LIGHT_BLUE,
+    LIGHT_GREEN,
+    LIGHT_AQUA,
+    LIGHT_RED,
+    LIGHT_PURPLE,
+    LIGHT_YELLOW,
+    BRIGHT_WHITE
+};
+
+const string colorStrings[] = {
+    "BLACK", "BLUE", "GREEN", "AQUA", "RED", "PURPLE", "YELLOW", "WHITE",
+    "GRAY", "LIGHT_BLUE", "LIGHT_GREEN", "LIGHT_AQUA", "LIGHT_RED",
+    "LIGHT_PURPLE", "LIGHT_YELLOW", "BRIGHT_WHITE"
+};
 
 #endif // DATA_H
