@@ -56,12 +56,20 @@ void addCar() {
     }
 
     cout << COLOR_GREEN << "Available colors:\n" COLOR_RESET;
-    for (int i = 0; i < 16; i++)
-        cout << COLOR_GREEN << i + 1 << ". " << colorStrings[i] << "  " COLOR_RESET;
+    int totalColors = sizeof(colorStrings) / sizeof(colorStrings[0]);
+    for (int i = 0; i < totalColors; i++) {
+        cout << COLOR_GREEN << (i + 1) << ". " << colorStrings[i];
+        if ((i + 1) % 5 == 0) {
+            cout << "\n";
+        }
+        else {
+            cout << "\t";
+        }
+    }
 
-    cout << COLOR_GREEN << "\nSelect a color (1-16): " COLOR_RESET;
+    cout << COLOR_GREEN << "\nSelect a color (1-" << totalColors << "): " COLOR_RESET;
     int choice;
-    if (!(cin >> choice) || choice < 1 || choice > 16) {
+    if (!(cin >> choice) || choice < 1 || choice > totalColors) {
         cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
@@ -81,7 +89,7 @@ void addCar() {
 
     cars[carCount++] = c;
     cout << COLOR_GREEN << "Car added.\n" COLOR_RESET;
-    saveData(); // Save the data after adding the car
+    saveData();
 }
 
 void addClient() {
