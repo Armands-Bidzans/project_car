@@ -22,26 +22,24 @@ string toLower(string str) {
 void saveData() {
     ofstream ofs("cars.txt");
     for (int i = 0; i < carCount; i++)
-        ofs << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " "
-        << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n";
+        ofs << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n";
 
     ofstream ofs2("clients.txt");
     for (int i = 0; i < clientCount; i++)
-        ofs2 << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " "
-        << clients[i].rentDate << "\n";
+        ofs2 << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " " << clients[i].rentDate << "\n";
 }
 
 void loadData() {
     ifstream ifs("cars.txt");
     carCount = 0;
-    while (carCount < MAX_CARS && (ifs >> cars[carCount].brand >> cars[carCount].model
-        >> cars[carCount].year >> cars[carCount].color >> cars[carCount].number >> cars[carCount].price))
+    while (carCount < MAX_CARS &&
+        (ifs >> cars[carCount].brand >> cars[carCount].model >> cars[carCount].year >> cars[carCount].color >> cars[carCount].number >> cars[carCount].price))
         carCount++;
 
     ifstream ifs2("clients.txt");
     clientCount = 0;
-    while (clientCount < MAX_CLIENTS && (ifs2 >> clients[clientCount].name >> clients[clientCount].middle
-        >> clients[clientCount].surname >> clients[clientCount].rentDate))
+    while (clientCount < MAX_CLIENTS &&
+        (ifs2 >> clients[clientCount].name >> clients[clientCount].middle >> clients[clientCount].surname >> clients[clientCount].rentDate))
         clientCount++;
 }
 
@@ -83,6 +81,7 @@ void addCar() {
 
     cars[carCount++] = c;
     cout << COLOR_GREEN << "Car added.\n" COLOR_RESET;
+    saveData(); // Save the data after adding the car
 }
 
 void addClient() {
@@ -98,26 +97,25 @@ void addClient() {
     }
     clients[clientCount++] = cl;
     cout << COLOR_GREEN << "Client added.\n" COLOR_RESET;
+    saveData(); // Save the data after adding the client
 }
 
 void displayCars() {
     if (carCount == 0) {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-        exit(EXIT_FAILURE);
+        cout << COLOR_RED << "No cars to display.\n" COLOR_RESET;
+        return;
     }
     for (int i = 0; i < carCount; i++)
-        cout << COLOR_DARK_GREEN << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " "
-        << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" COLOR_RESET;
+        cout << COLOR_DARK_GREEN << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" COLOR_RESET;
 }
 
 void displayClients() {
     if (clientCount == 0) {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-        exit(EXIT_FAILURE);
+        cout << COLOR_RED << "No clients to display.\n" COLOR_RESET;
+        return;
     }
     for (int i = 0; i < clientCount; i++)
-        cout << COLOR_DARK_GREEN << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " "
-        << clients[i].rentDate << "\n" COLOR_RESET;
+        cout << COLOR_DARK_GREEN << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " " << clients[i].rentDate << "\n" COLOR_RESET;
 }
 
 void searchCar() {
@@ -178,21 +176,19 @@ void searchCar() {
         case 4: match = (cars[i].year == yr); break;
         }
         if (match) {
-            cout << COLOR_CYAN << "Found: " << cars[i].brand << " " << cars[i].model << " "
-                << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" COLOR_RESET;
+            cout << COLOR_CYAN << "Found: " << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" COLOR_RESET;
             found = true;
             break;
         }
     }
     if (!found) {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-        exit(EXIT_FAILURE);
+        cout << COLOR_RED << "Car not found.\n" COLOR_RESET;
     }
 }
 
 void searchClient() {
     int choice;
-    cout << COLOR_CYAN << "Search client by: 1.Surname 2.Price range\nChoice: " COLOR_RESET;
+    cout << COLOR_CYAN << "Search client by: 1.Surname\nChoice: " COLOR_RESET;
     if (!(cin >> choice)) {
         cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
         exit(EXIT_FAILURE);
@@ -208,25 +204,7 @@ void searchClient() {
         surname = toLower(surname);
         for (int i = 0; i < clientCount; i++) {
             if (toLower(clients[i].surname) == surname) {
-                cout << COLOR_CYAN << "Found: " << clients[i].name << " "
-                    << clients[i].middle << " " << clients[i].surname << "\n" COLOR_RESET;
-                found = true;
-                break;
-            }
-        }
-    }
-    else if (choice == 2) {
-        double minP, maxP;
-        cout << COLOR_CYAN << "Enter minimum and maximum price: " COLOR_RESET;
-        if (!(cin >> minP >> maxP)) {
-            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-            exit(EXIT_FAILURE);
-        }
-        for (int i = 0; i < clientCount; i++) {
-            if (cars[i].price >= minP && cars[i].price <= maxP) {
-                cout << COLOR_CYAN << "Found: " << clients[i].name << " "
-                    << clients[i].middle << " " << clients[i].surname
-                    << " Price: " << cars[i].price << "\n" COLOR_RESET;
+                cout << COLOR_CYAN << "Found: " << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << "\n" COLOR_RESET;
                 found = true;
                 break;
             }
@@ -237,71 +215,90 @@ void searchClient() {
         exit(EXIT_FAILURE);
     }
     if (!found) {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-        exit(EXIT_FAILURE);
+        cout << COLOR_RED << "Client not found.\n" COLOR_RESET;
     }
 }
 
+// Новые функции удаления =====
+void deleteCarEntry() {
+    if (carCount == 0) {
+        cout << COLOR_RED << "No cars to delete.\n" COLOR_RESET;
+        return;
+    }
+    cout << COLOR_RED << "Cars:\n" COLOR_RESET;
+    for (int i = 0; i < carCount; i++) {
+        cout << COLOR_DARK_GREEN << "Car " << (i + 1) << ": " << cars[i].brand << " " << cars[i].model << " "
+            << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" COLOR_RESET;
+    }
+    cout << COLOR_RED << "Enter the index of the car to delete (1-" << carCount << "): " COLOR_RESET;
+    int choice;
+    if (!(cin >> choice) || choice < 1 || choice > carCount) {
+        cout << COLOR_RED << "Invalid choice. No car deleted.\n" COLOR_RESET;
+        return;
+    }
+    // Сдвигаем элементы влево для удаления выбранного
+    for (int i = choice - 1; i < carCount - 1; i++) {
+        cars[i] = cars[i + 1];
+    }
+    carCount--;
+    cout << COLOR_RED << "Car deleted.\n" COLOR_RESET;
+    saveData();
+}
+
+
+// Удаление клиента по выбору из списка
+void deleteClientEntry() {
+    if (clientCount == 0) {
+        cout << COLOR_RED << "No clients to delete.\n" COLOR_RESET;
+        return;
+    }
+    cout << COLOR_RED << "Clients:\n" COLOR_RESET;
+    for (int i = 0; i < clientCount; i++) {
+        cout << COLOR_DARK_GREEN << "Client " << (i + 1) << ": " << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << " " << clients[i].rentDate << "\n" COLOR_RESET;
+    }
+    cout << COLOR_RED << "Enter the index of the client to delete (1-" << clientCount << "): " COLOR_RESET;
+    int choice;
+    if (!(cin >> choice) || choice < 1 || choice > clientCount) {
+        cout << COLOR_RED << "Invalid choice. No client deleted.\n" COLOR_RESET;
+        return;
+    }
+    for (int i = choice - 1; i < clientCount - 1; i++) {
+        clients[i] = clients[i + 1];
+    }
+    clientCount--;
+    cout << COLOR_RED << "Client deleted.\n" COLOR_RESET;
+    saveData();
+}
+
+// Удаление всех данных
+void deleteAllData() {
+    carCount = 0;
+    clientCount = 0;
+    cout << COLOR_RED << "All data deleted.\n" COLOR_RESET;
+    saveData();
+}
+
+// Главное меню удаления
 void deleteEntry() {
     int choice;
-    cout << COLOR_RED << "Delete: 1.Car 2.Client 3.All\nChoice: " COLOR_RESET;
+    cout << COLOR_RED << "Delete: 1. Car  2. Client  3. All\nChoice: " COLOR_RESET;
     if (!(cin >> choice)) {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
+        cout << COLOR_RED << "Invalid input.\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
-    if (choice == 1) {
-        string num;
-        cout << COLOR_RED << "Enter the car number to delete: " COLOR_RESET;
-        if (!(cin >> num)) {
-            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-            exit(EXIT_FAILURE);
-        }
-        num = toLower(num);
-        bool found = false;
-        for (int i = 0; i < carCount; i++) {
-            if (toLower(cars[i].number) == num) {
-                for (int j = i; j < carCount - 1; j++)
-                    cars[j] = cars[j + 1];
-                carCount--;
-                cout << COLOR_RED << "Car deleted.\n" COLOR_RESET;
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-            exit(EXIT_FAILURE);
-        }
-    }
-    else if (choice == 2) {
-        string surname;
-        cout << COLOR_RED << "Enter client's surname: " COLOR_RESET;
-        cin.ignore();
-        getline(cin, surname);
-        surname = toLower(surname);
-        bool found = false;
-        for (int i = 0; i < clientCount; i++) {
-            if (toLower(clients[i].surname) == surname) {
-                for (int j = i; j < clientCount - 1; j++)
-                    clients[j] = clients[j + 1];
-                clientCount--;
-                cout << COLOR_RED << "Client deleted.\n" COLOR_RESET;
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-            exit(EXIT_FAILURE);
-        }
-    }
-    else if (choice == 3) {
-        carCount = clientCount = 0;
-        cout << COLOR_RED << "All data deleted.\n" COLOR_RESET;
-    }
-    else {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
-        exit(EXIT_FAILURE);
+    switch (choice) {
+    case 1:
+        deleteCarEntry();
+        break;
+    case 2:
+        deleteClientEntry();
+        break;
+    case 3:
+        deleteAllData();
+        break;
+    default:
+        cout << COLOR_RED << "Invalid choice.\n" COLOR_RESET;
+        break;
     }
 }
 
@@ -328,7 +325,7 @@ void calcDebt() {
         }
     }
     if (idx == -1) {
-        cout << COLOR_RED << "incorrect value\n" COLOR_RESET;
+        cout << COLOR_RED << "Client not found.\n" COLOR_RESET;
         exit(EXIT_FAILURE);
     }
     string today;
@@ -340,8 +337,6 @@ void calcDebt() {
     int diff = convertToDays(today) - convertToDays(clients[idx].rentDate);
     if (diff < 0)
         diff = 0;
-    cout << COLOR_BLUE << "Debt for " << clients[idx].name << " " << clients[idx].surname
-        << " is: " << diff * cars[idx].price << "\n" COLOR_RESET;
+    cout << COLOR_BLUE << "Debt for " << clients[idx].name << " " << clients[idx].surname << " is: " << diff * cars[idx].price << "\n" COLOR_RESET;
 }
-
 #endif // FUNCTIONS_H
