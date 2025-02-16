@@ -133,11 +133,11 @@
   <ItemGroup>
     <Text Include="cars.txt" />
     <Text Include="clients.txt" />
+    <Text Include="contracts.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data.h" />
     <ClInclude Include="functions.h" />
-    <ClInclude Include="functions2.h" />
     <ClInclude Include="models.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

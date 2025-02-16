@@ -3,42 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\project_car\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\clients.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\clients.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\cars.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cars.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Downloads\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\data.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\data.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\data.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\data.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\data.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\models.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\models.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\contracts.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\contracts.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\functions2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\functions2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\models.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\models.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\data.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\data.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\data.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\data.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\cars.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\cars.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|C:\\Users\\User\\Desktop\\project_car\\Project1\\clients.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CE6DF2CF-1B9C-4478-A063-0BF858F1F64D}|Project1\\Project1.vcxproj|solutionrelative:Project1\\clients.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Downloads\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\data.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\include\\atomic||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\project_car\\Project1\\contract.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Project1\\contract.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,11 +52,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "contracts.txt",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\contracts.txt",
+              "RelativeDocumentMoniker": "Project1\\contracts.txt",
+              "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\contracts.txt",
+              "RelativeToolTip": "Project1\\contracts.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-16T15:19:37.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "contract.txt",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\contract.txt",
+              "RelativeDocumentMoniker": "Project1\\contract.txt",
+              "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\contract.txt",
+              "RelativeToolTip": "Project1\\contract.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-16T13:34:29.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "data.h",
               "DocumentMoniker": "C:\\Users\\User\\Downloads\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\data.h",
               "RelativeDocumentMoniker": "..\\..\\Downloads\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\data.h",
@@ -60,8 +89,7 @@
               "RelativeToolTip": "..\\..\\Downloads\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\data.h",
               "ViewState": "AQIAADwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-14T08:05:22.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T08:05:22.142Z"
             },
             {
               "$type": "Document",
@@ -77,94 +105,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "clients.txt",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\clients.txt",
               "RelativeDocumentMoniker": "Project1\\clients.txt",
               "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\clients.txt",
               "RelativeToolTip": "Project1\\clients.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-02-13T20:47:47.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T20:47:47.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\main.cpp",
               "RelativeDocumentMoniker": "Project1\\main.cpp",
               "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\main.cpp",
               "RelativeToolTip": "Project1\\main.cpp",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGkAAAABAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAwwBkAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-08T05:53:55.558Z"
+              "WhenOpened": "2025-02-08T05:53:55.558Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "cars.txt",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\cars.txt",
               "RelativeDocumentMoniker": "Project1\\cars.txt",
               "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\cars.txt",
               "RelativeToolTip": "Project1\\cars.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-02-10T20:00:39.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T20:00:39.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "functions2.h",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\functions2.h",
-              "RelativeDocumentMoniker": "Project1\\functions2.h",
-              "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\functions2.h",
-              "RelativeToolTip": "Project1\\functions2.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-10T19:24:08.205Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "models.h",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\models.h",
               "RelativeDocumentMoniker": "Project1\\models.h",
               "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\models.h",
               "RelativeToolTip": "Project1\\models.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-10T19:23:25.411Z"
+              "WhenOpened": "2025-02-10T19:23:25.411Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "data.h",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\data.h",
               "RelativeDocumentMoniker": "Project1\\data.h",
               "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\data.h",
               "RelativeToolTip": "Project1\\data.h",
-              "ViewState": "AQIAADIAAAAAAAAAAAAgwCQAAAAAAAAA",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-09T19:05:38.979Z"
+              "WhenOpened": "2025-02-09T19:05:38.979Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "functions.h",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\functions.h",
               "RelativeDocumentMoniker": "Project1\\functions.h",
               "ToolTip": "C:\\Users\\User\\Desktop\\project_car\\Project1\\functions.h",
               "RelativeToolTip": "Project1\\functions.h",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAwwFwAAAABAAAA",
+              "ViewState": "AQIAANUBAAAAAAAAAAAAwPEBAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-02-08T05:54:09.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "data.cpp",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\project_car\\Project1\\data.cpp",
               "RelativeDocumentMoniker": "Project1\\data.cpp",
@@ -172,7 +189,8 @@
               "RelativeToolTip": "Project1\\data.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-08T05:53:52.628Z"
+              "WhenOpened": "2025-02-08T05:53:52.628Z",
+              "EditorCaption": ""
             }
           ]
         }

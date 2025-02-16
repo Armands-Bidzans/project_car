@@ -19,4 +19,21 @@ struct Client {
     string rentDate;
 };
 
+struct Contract {
+    string name; // Имя клиента
+    string surname; // Фамилия клиента
+    string middleName; // Отчество клиента
+    string registrationNumber; // Регистрационный номер клиента
+    string carBrand; // Марка автомобиля
+    string carModel; // Модель автомобиля
+    string carColor; // Цвет автомобиля
+    string carNumber; // Номер автомобиля
+    int carYear; // Год выпуска автомобиля
+    int carPrice; // Цена аренды автомобиля
+    string startDay; // Дата начала аренды
+    string endDay; // Дата окончания аренды
+    short rentDays; // Количество дней аренды
+    short totalRentalPrice; // Общая стоимость аренды
+};
+
 #endif // MODELS_H

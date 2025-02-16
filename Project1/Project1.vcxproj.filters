@@ -25,6 +25,9 @@
   <ItemGroup>
     <Text Include="cars.txt" />
     <Text Include="clients.txt" />
+    <Text Include="contracts.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="models.h">
@@ -34,9 +37,6 @@
       <Filter>Файлы ресурсов</Filter>
     </ClInclude>
     <ClInclude Include="data.h">
-      <Filter>Файлы ресурсов</Filter>
-    </ClInclude>
-    <ClInclude Include="functions2.h">
       <Filter>Файлы ресурсов</Filter>
     </ClInclude>
   </ItemGroup>

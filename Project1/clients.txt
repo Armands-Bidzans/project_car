@@ -1,20 +1,3 @@
-Ivan Ivanovich Ivanov 01/01/2022 50
-Petr Petrovich Petrov 15/03/2023 60
-Sergey Sergeevich Sergeev 10/10/2021 55.5
-Alexey Alexandrovich Smirnov 05/05/2022 65
-Dmitry Dmitrievich Sokolov 12/07/2021 70
-Nikolay Nikolaevich Kuznetsov 23/08/2020 55
-Andrey Andreevich Popov 30/09/2022 60.5
-Mikhail Mikhailovich Lebedev 18/11/2021 52
-Vladimir Vladimirovich Morozov 09/12/2021 68
-Sergei Sergeyevich Novikov 11/02/2022 59
-Oleg Olegovich Fedorov 14/04/2023 64
-Igor Igorevich Vinogradov 21/06/2022 53.5
-Anton Antonovich Pavlov 07/07/2021 57
-Roman Romanovich Vasiliev 28/08/2022 62
-Kirill Kirillovich Makarov 17/10/2021 61.5
-Maxim Maximovich Dmitriev 04/01/2023 66
-Yuri Yurievich Zaitsev 15/03/2022 54
-Denis Denisovich Kolesnikov 27/05/2021 69
-Evgeny Evgenievich Solovyov 30/07/2023 58
-Valery Valeryevich Kozlov 08/09/2021 63.5
+Gandon Gandon Gandon
+1 1 1
+1 1 1
