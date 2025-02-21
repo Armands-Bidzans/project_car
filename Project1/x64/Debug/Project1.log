@@ -1,2 +1,8 @@
-﻿  main.cpp
+﻿  data.cpp
+C:\Users\User\Desktop\project_car\Project1\functions.h(13,9): warning C4005: COLOR_RED: изменение макроопределения
+C:\Users\User\Desktop\project_car\Project1\functions.h(14,9): warning C4005: COLOR_GREEN: изменение макроопределения
+C:\Users\User\Desktop\project_car\Project1\functions.h(15,9): warning C4005: COLOR_DARK_GREEN: изменение макроопределения
+C:\Users\User\Desktop\project_car\Project1\functions.h(16,9): warning C4005: COLOR_BLUE: изменение макроопределения
+C:\Users\User\Desktop\project_car\Project1\functions.h(17,9): warning C4005: COLOR_CYAN: изменение макроопределения
+C:\Users\User\Desktop\project_car\Project1\functions.h(18,9): warning C4005: COLOR_RESET: изменение макроопределения
   Project1.vcxproj -> C:\Users\User\Desktop\project_car\x64\Debug\Project1.exe
