@@ -18,7 +18,7 @@ void clearScreen() {
 
 int main() {
     loadData();
-    int choice;
+    short choice;
     do {
         clearScreen();
         cout << COLOR_YELLOW
@@ -48,7 +48,7 @@ int main() {
         clearScreen();
         switch (choice) {
         case 1: {
-            int sub;
+            short sub;
             cout << COLOR_GREEN "Add: 1.Car 2.Client 3.Contract\nChoice: " COLOR_RESET;
             if (!(cin >> sub)) {
                 cout << COLOR_RED "\nInvalid input. Exiting...\n" COLOR_RESET;
@@ -68,7 +68,7 @@ int main() {
             break;
         }
         case 2: {
-            int sub;
+            short sub;
             cout << COLOR_DARK_GREEN "Show: 1.Cars 2.Clients 3.Contracts\nChoice: " COLOR_RESET;
             if (!(cin >> sub)) {
                 cout << COLOR_RED "\nInvalid input. Exiting...\n" COLOR_RESET;
@@ -88,7 +88,7 @@ int main() {
             break;
         }
         case 3: {
-            int sub;
+            short sub;
             cout << COLOR_CYAN "Search: 1.Car 2.Client 3.Contract\nChoice: " COLOR_RESET;
             if (!(cin >> sub)) {
                 cout << COLOR_RED "\nInvalid input. Exiting...\n" COLOR_RESET;

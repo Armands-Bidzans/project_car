@@ -1,1 +1,20 @@
-алыарлароы;ыоалоалыоалдыо;ылалыаолыдао;12;12;12;21;12;02;52
+Ivan;Ivanov;Ivanovich;REG123;Toyota;Camry;5;01/01/2023;06/01/2023;250
+Olga;Sidorova;Petrovna;REG456;Honda;Civic;3;10/02/2023;13/02/2023;120
+Alexey;Smirnov;Alexandrovich;REG789;Ford;Focus;7;15/03/2023;22/03/2023;315
+Maria;Ivanova;Sergeevna;REG101;BMW;X5;10;05/04/2023;15/04/2023;1000
+Dmitry;Kuznetsov;Andreevich;REG202;Audi;A4;4;20/05/2023;24/05/2023;320
+Elena;Pavlova;Viktorovna;REG303;Mercedes;C200;6;01/06/2023;07/06/2023;540
+Sergey;Volkov;Dmitrievich;REG404;Hyundai;Tucson;8;10/07/2023;18/07/2023;480
+Natalia;Morozova;Olegovna;REG505;Kia;Sportage;5;15/08/2023;20/08/2023;275
+Andrey;Sokolov;Nikolaevich;REG606;Volkswagen;Golf;7;25/09/2023;02/10/2023;350
+Tatiana;Fedorova;Pavlovna;REG707;Nissan;Qashqai;3;10/11/2023;13/11/2023;195
+Vladimir;Popov;Ivanovich;REG808;Chevrolet;Cruze;9;05/12/2023;14/12/2023;360
+Ekaterina;Ivanova;Dmitrievna;REG909;Volvo;XC60;12;20/01/2024;01/02/2024;1020
+Pavel;Novikov;Sergeevich;REG010;Subaru;Outback;6;15/02/2024;21/02/2024;420
+Irina;Lebedeva;Andreevna;REG111;Mazda;CX5;5;01/03/2024;06/03/2024;375
+Mikhail;Kozlov;Viktorovich;REG212;Lexus;RX350;10;10/04/2024;20/04/2024;1100
+Svetlana;Orlova;Olegovna;REG313;Jeep;Wrangler;7;05/05/2024;12/05/2024;665
+Roman;Belyaev;Nikolaevich;REG414;Tesla;Model 3;14;15/06/2024;29/06/2024;1680
+Yulia;Guseva;Pavlovna;REG515;Porsche;Cayenne;3;01/07/2024;04/07/2024;450
+Anna;Maria;Petrova;REG616;Land Rover;Discovery;8;10/08/2024;18/08/2024;1040
+John;Adam;Smith;REG717;Fiat;500;2;05/09/2024;07/09/2024;70

@@ -2,9 +2,9 @@
 #define DATA_H
 #include <string>
 using namespace std;
-const int MAX_CARS = 100;
-const int MAX_CLIENTS = 100;
-const int MAX_CONTRACTS = 100;
+const short MAX_CARS = 100;
+const short MAX_CLIENTS = 100;
+const short MAX_CONTRACTS = 100;
 
 #define COLOR_RESET      "\033[0m"
 #define COLOR_RED        "\033[31m"
@@ -19,8 +19,8 @@ struct Car {
     string model;
     string color;
     string number;
-    int price;
-    int year;
+    short price;
+    short year;
 };
 
 struct Client {

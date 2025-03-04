@@ -9,7 +9,7 @@ struct Car {
     string color;
     string number;
     double price;
-    int year;
+    short year;
 };
 
 struct Client {
@@ -28,8 +28,8 @@ struct Contract {
     string carModel; // Модель автомобиля
     string carColor; // Цвет автомобиля
     string carNumber; // Номер автомобиля
-    int carYear; // Год выпуска автомобиля
-    int carPrice; // Цена аренды автомобиля
+    short carYear; // Год выпуска автомобиля
+    short carPrice; // Цена аренды автомобиля
     string startDay; // Дата начала аренды
     string endDay; // Дата окончания аренды
     short rentDays; // Количество дней аренды

@@ -1,1 +1,20 @@
-1 1 1 Red 1 1
+Toyota Camry 2020 Blue ABC123 50
+Honda Civic 2019 Red XYZ789 40
+Ford Focus 2021 Silver DEF456 45
+BMW X5 2022 Black BMW001 100
+Audi A4 2021 White AUD123 80
+Mercedes C200 2020 Gray MER456 90
+Hyundai Tucson 2022 Green HYU789 60
+Kia Sportage 2021 Blue KIA123 55
+Volkswagen Golf 2020 Red VW456 50
+Nissan Qashqai 2022 Black NIS789 65
+Chevrolet Cruze 2019 Silver CHE123 40
+Volvo XC60 2021 Blue VOL456 85
+Subaru Outback 2020 Green SUB789 70
+Mazda CX5 2022 White MAZ123 75
+Lexus RX350 2021 Black LEX456 110
+Jeep Wrangler 2020 Yellow JEE789 95
+Tesla Model 3 2022 White TES123 120
+Porsche Cayenne 2021 Black POR456 150
+Land Rover Discovery 2020 Gray LAN789 130
+Fiat 500 2019 Red FIA123 35

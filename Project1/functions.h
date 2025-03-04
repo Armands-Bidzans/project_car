@@ -32,18 +32,18 @@ string toLower(string str) {
 // Сохранение данных в файлы
 void saveData() {
     ofstream ofs("cars.txt");
-    for (int i = 0; i < carCount; i++) {
+    for (short i = 0; i < carCount; i++) {
         ofs << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n";}
     ofs.close();
 
     ofstream ofs2("clients.txt");
-    for (int i = 0; i < clientCount; i++) {
+    for (short i = 0; i < clientCount; i++) {
         ofs2 << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << "\n";
     }
     ofs2.close();
 
     ofstream ofs3("contracts.txt");
-    for (int i = 0; i < contractCount; i++) {
+    for (short i = 0; i < contractCount; i++) {
         ofs3 << contracts[i].name << ";" << contracts[i].surname << ";" << contracts[i].middleName << ";" << contracts[i].registrationNumber << ";" << contracts[i].carBrand << ";"<< contracts[i].carModel << ";"
     << contracts[i].rentDays << ";"<< contracts[i].startDay << ";" << contracts[i].endDay << ";" << contracts[i].totalRentalPrice << "\n";
     }
@@ -106,7 +106,7 @@ void addCar() {
     }
 
     cout << COLOR_GREEN << "Available colors:\n";
-    int totalColors = sizeof(colorStrings) / sizeof(colorStrings[0]);
+    short totalColors = sizeof(colorStrings) / sizeof(colorStrings[0]);
     for (int i = 0; i < totalColors; i++) {
         cout << COLOR_GREEN << (i + 1) << ". " << colorStrings[i] << ((i + 1) % 5 == 0 ? "\n" : "\t"); // ((i + 1) % 5 == 0 ? "\n" : "\t") - это тернарный оператор, который работает следующим образом: (i + 1) % 5 == 0 проверяет, делится ли(i + 1) на 5 без остатка. Если да(т.е.это каждый пятый элемент), то добавляется символ новой строки("\n") Если нет, то добавляется табуляция("\t").
     }
@@ -192,7 +192,7 @@ void displayCars() {
         cout << COLOR_RED << "No cars to display.\n" << COLOR_RESET;
         return;
     }
-    for (int i = 0; i < carCount; i++) {
+    for (short i = 0; i < carCount; i++) {
         cout << COLOR_DARK_GREEN << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" << COLOR_RESET;
     }
 }
@@ -203,7 +203,7 @@ void displayClients() {
         cout << COLOR_RED << "No clients to display.\n" << COLOR_RESET;
         return;
     }
-    for (int i = 0; i < clientCount; i++) {
+    for (short i = 0; i < clientCount; i++) {
         cout << COLOR_DARK_GREEN << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << "\n" << COLOR_RESET;
     }
 }
@@ -214,7 +214,7 @@ void displayContracts() {
         cout << COLOR_RED << "No contracts to display.\n" << COLOR_RESET;
         return;
     }
-    for (int i = 0; i < contractCount; i++) {
+    for (short i = 0; i < contractCount; i++) {
         cout << COLOR_DARK_GREEN << "Contract " << (i + 1) << ": "
             << contracts[i].name << " " << contracts[i].surname << " " << contracts[i].middleName << " " << contracts[i].registrationNumber << " " << contracts[i].carBrand << " " << contracts[i].carModel << " "
             << contracts[i].rentDays << " " << contracts[i].startDay << " " << contracts[i].endDay << " " << contracts[i].totalRentalPrice << "\n" << COLOR_RESET;
@@ -223,7 +223,7 @@ void displayContracts() {
 
 // Поиск автомобиля
 void searchCar() {
-    int choice;
+    short choice;
     cout << COLOR_CYAN << "Search car by: 1.Brand 2.Color 3.Number 4.Year\nChoice: " << COLOR_RESET;
     if (!(cin >> choice) || choice < 1 || choice > 4) {
         cout << COLOR_RED << "Invalid choice.\n" << COLOR_RESET;
@@ -242,7 +242,7 @@ void searchCar() {
     }
 
     bool found = false;
-    for (int i = 0; i < carCount; i++) {
+    for (short i = 0; i < carCount; i++) {
         bool match = false;
         switch (choice) {
         case 1: match = (toLower(cars[i].brand) == key); break;
@@ -267,7 +267,7 @@ void searchClient() {
     surname = toLower(surname);
 
     bool found = false;
-    for (int i = 0; i < clientCount; i++) {
+    for (short i = 0; i < clientCount; i++) {
         if (toLower(clients[i].surname) == surname) {
             cout << COLOR_CYAN << "Found: " << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << "\n" << COLOR_RESET;
             found = true;
@@ -285,7 +285,7 @@ void searchContract() {
     surname = toLower(surname);
 
     bool found = false;
-    for (int i = 0; i < contractCount; i++) {
+    for (short i = 0; i < contractCount; i++) {
         if (toLower(contracts[i].surname) == surname) {
             cout << COLOR_CYAN << "Found: " << contracts[i].name << " " << contracts[i].surname << " " << contracts[i].middleName << " " << contracts[i].registrationNumber << " " << contracts[i].carBrand << " " 
                 << contracts[i].carModel << " " << contracts[i].rentDays << " " << contracts[i].startDay << " " << contracts[i].endDay << " " << contracts[i].totalRentalPrice << "\n" << COLOR_RESET;
@@ -298,7 +298,7 @@ void searchContract() {
 // Удаление записи
 void deleteEntry() {
     cout << COLOR_RED << "Delete: 1.Car 2.Client 3.Contract 4.All\nChoice: " << COLOR_RESET;
-    int choice;
+    short choice;
     if (!(cin >> choice) || choice < 1 || choice > 4) {
         cout << COLOR_RED << "Invalid choice.\n" << COLOR_RESET;
         cin.clear();
@@ -312,16 +312,16 @@ void deleteEntry() {
             cout << COLOR_RED << "No cars to delete.\n" << COLOR_RESET;
             return;
         }
-        for (int i = 0; i < carCount; i++) {
+        for (short i = 0; i < carCount; i++) {
             cout << COLOR_DARK_GREEN << "Car " << (i + 1) << ": " << cars[i].brand << " " << cars[i].model << " " << cars[i].year << " " << cars[i].color << " " << cars[i].number << " " << cars[i].price << "\n" << COLOR_RESET;
         }
-        int idx;
+        short idx;
         cout << COLOR_RED << "Enter index to delete (1-" << carCount << "): " << COLOR_RESET;
         if (!(cin >> idx) || idx < 1 || idx > carCount) {
             cout << COLOR_RED << "Invalid choice.\n" << COLOR_RESET;
             return;
         }
-        for (int i = idx - 1; i < carCount - 1; i++) cars[i] = cars[i + 1];
+        for (short i = idx - 1; i < carCount - 1; i++) cars[i] = cars[i + 1];
         carCount--;
         cout << COLOR_RED << "Car deleted.\n" << COLOR_RESET;
         saveData();
@@ -332,7 +332,7 @@ void deleteEntry() {
             cout << COLOR_RED << "No clients to delete.\n" << COLOR_RESET;
             return;
         }
-        for (int i = 0; i < clientCount; i++) {
+        for (short i = 0; i < clientCount; i++) {
             cout << COLOR_DARK_GREEN << "Client " << (i + 1) << ": " << clients[i].name << " " << clients[i].middle << " " << clients[i].surname << "\n" << COLOR_RESET;
         }
         cout << COLOR_RED << "Enter index to delete (1-" << clientCount << "): " << COLOR_RESET;
@@ -340,7 +340,7 @@ void deleteEntry() {
             cout << COLOR_RED << "Invalid choice.\n" << COLOR_RESET;
             return;
         }
-        for (int i = idx - 1; i < clientCount - 1; i++) clients[i] = clients[i + 1];
+        for (short i = idx - 1; i < clientCount - 1; i++) clients[i] = clients[i + 1];
         clientCount--;
         cout << COLOR_RED << "Client deleted.\n" << COLOR_RESET;
         saveData();
@@ -351,7 +351,7 @@ void deleteEntry() {
             cout << COLOR_RED << "No contracts to delete.\n" << COLOR_RESET;
             return;
         }
-        for (int i = 0; i < contractCount; i++) {
+        for (short i = 0; i < contractCount; i++) {
             cout << COLOR_DARK_GREEN << "Contract " << (i + 1) << ": " << contracts[i].name << " " << contracts[i].surname << " " << contracts[i].middleName << " " << contracts[i].registrationNumber << " " 
                 << contracts[i].carBrand << " " << contracts[i].carModel << "\n" << COLOR_RESET;
         }
@@ -360,7 +360,7 @@ void deleteEntry() {
             cout << COLOR_RED << "Invalid choice.\n" << COLOR_RESET;
             return;
         }
-        for (int i = idx - 1; i < contractCount - 1; i++) contracts[i] = contracts[i + 1];
+        for (short i = idx - 1; i < contractCount - 1; i++) contracts[i] = contracts[i + 1];
         contractCount--;
         cout << COLOR_RED << "Contract deleted.\n" << COLOR_RESET;
         saveData();
@@ -376,7 +376,7 @@ void deleteEntry() {
 
 // Преобразование даты в количество дней
 int convertToDays(const string& date) {
-    int d, m, y;
+    short d, m, y;
     char sep1, sep2;
     istringstream iss(date);
     if (!(iss >> d >> sep1 >> m >> sep2 >> y)) return 0;
@@ -391,8 +391,8 @@ void calcDebt() {
     getline(cin, surname);
     surname = toLower(surname);
 
-    int idx = -1;
-    for (int i = 0; i < clientCount; i++) {
+    short idx = -1;
+    for (short i = 0; i < clientCount; i++) {
         if (toLower(clients[i].surname) == surname) {
             idx = i;
             break;
@@ -412,7 +412,7 @@ void calcDebt() {
         return;
     }
 
-    int diff = convertToDays(today) - convertToDays(contracts[idx].endDay);
+    short diff = convertToDays(today) - convertToDays(contracts[idx].endDay);
     if (diff < 0) diff = 0;
     cout << COLOR_BLUE << "Debt for " << clients[idx].name << " " << clients[idx].surname << " is: " << diff * cars[idx].price << "\n" << COLOR_RESET;
 }
